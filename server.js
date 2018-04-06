@@ -28,10 +28,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.use((req, res, next) => {
-//     res.render('maintainance.hbs')
-// });
-
 app.use(express.static(__dirname + "/public"));
 
 app.get('/',(req, res) => {
@@ -39,6 +35,11 @@ app.get('/',(req, res) => {
     res.render('home.hbs',{
         pageTitle: "Home page",
         welcomeMessage: "Welcome to my page"
+    });
+});
+app.get('/projects', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Project page'
     });
 });
 
