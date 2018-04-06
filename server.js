@@ -37,11 +37,11 @@ app.get('/',(req, res) => {
         welcomeMessage: "Welcome to my page"
     });
 });
-app.get('/projects', (req, res) => {
+app.get('/project', (req, res) => {
     res.render('project.hbs', {
         pageTitle: 'Project page'
     });
-});
+}); 
 
 app.get('/bad', (req, res) => {
     res.send({
